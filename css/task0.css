@@ -17,37 +17,23 @@ form {
     background-color: white;
     padding: 24px;
     border-radius: 10px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 
 
 label {
-    display: block;
     margin-bottom: 6px;
     font-weight: 600;
 }
 
-input,
-textarea {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ced4da;
-    border-radius: 6px;
-    font: inherit;
-}
+
 
 textarea {
     min-height: 120px;
     resize: vertical;
 }
 
-input:focus,
-textarea:focus {
-    outline: 2px solid #b6d4fe;
-    border-color: #86b7fe;
-}
+
 
 button {
     padding: 10px 18px;
