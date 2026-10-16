@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <h1 class="mb-4">create an account</h1>
+
+                <form id="registrationForm" novalidate>
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label">
+                                first name
+                            </label>
+                            <input
+                                type="text"
+                                class="form-control validate-field"
+                                id="firstName"
+                                required
+                                minlength="2"
+                            >
+                            <div class="invalid-feedback">
+                                enter your first name, at least 2 characters
+                            </div>
+                            <div class="valid-feedback">good</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label">
+                                last Name
+                            </label>
+                            <input
+                                type="text"
+                                class="form-control validate-field"
+                                id="lastName"
+                                required
+                                minlength="2"
+                            >
+                            <div class="invalid-feedback">
+                                enter your last name, at least 2 characters
+                            </div>
+                            <div class="valid-feedback">good</div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="email" class="form-label">email</label>
+                            <input
+                                type="email"
+                                class="form-control validate-field"
+                                id="email"
+                                placeholder="name@example.com"
+                                required
+                            >
+                            <div class="invalid-feedback">
+                                enter a valid email address
+                            </div>
+                            <div class="valid-feedback">good</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="password" class="form-label">
+                                password
+                            </label>
+                            <input
+                                type="password"
+                                class="form-control validate-field"
+                                id="password"
+                                required
+                                minlength="8"
+                            >
+                            <div class="form-text">
+                                password must contain at least 8 characters
+                            </div>
+                            <div class="invalid-feedback">
+                                password must contain at least 8 characters
+                            </div>
+                            <div class="valid-feedback">good</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="confirmPassword" class="form-label">
+                                confirm password
+                            </label>
+                            <input
+                                type="password"
+                                class="form-control validate-field"
+                                id="confirmPassword"
+                                required
+                            >
+                            <div class="invalid-feedback">
+                                passwords are required and must match
+                            </div>
+                            <div class="valid-feedback">passwords match</div>
+                        </div>
+
+                        <div class="col-12">
+                            <fieldset>
+                                <legend class="form-label fs-6">gender</legend>
+
+                                <div class="form-check form-check-inline">
+                                    <input
+                                        type="radio"
+                                        class="form-check-input"
+                                        id="male"
+                                        name="gender"
+                                        value="male"
+                                        required
+                                    >
+                                    <label class="form-check-label" for="male">
+                                        male
+                                    </label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input
+                                        type="radio"
+                                        class="form-check-input"
+                                        id="female"
+                                        name="gender"
+                                        value="female"
+                                        required
+                                    >
+                                    <label class="form-check-label" for="female">
+                                        female
+                                    </label>
+                                </div>
+
+                                <div
+                                    id="genderFeedback"
+                                    class="invalid-feedback"
+                                >
+                                    please select your gender
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-12">
+                            <fieldset>
+                                <legend class="form-label fs-6">hobbies</legend>
+
+                                <div class="form-check">
+                                    <input
+                                        type="checkbox"
+                                        class="form-check-input"
+                                        id="reading"
+                                        name="hobbies"
+                                        value="reading"
+                                    >
+                                    <label class="form-check-label" for="reading">
+                                        reading
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input
+                                        type="checkbox"
+                                        class="form-check-input"
+                                        id="gaming"
+                                        name="hobbies"
+                                        value="gaming"
+                                    >
+                                    <label class="form-check-label" for="gaming">
+                                        gaming
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input
+                                        type="checkbox"
+                                        class="form-check-input"
+                                        id="sports"
+                                        name="hobbies"
+                                        value="sports"
+                                    >
+                                    <label class="form-check-label" for="sports">
+                                        sports
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="country" class="form-label">
+                                country
+                            </label>
+                            <select
+                                class="form-select validate-field"
+                                id="country"
+                                required
+                            >
+                                <option value="" selected disabled>
+                                    select your country
+                                </option>
+                                <option value="Kazakhstan">kazakhstan</option>
+                                <option value="USA">united states</option>
+                                <option value="Canada">canada</option>
+                                <option value="Other">other</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                please select a country
+                            </div>
+                            <div class="valid-feedback">good</div>
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">
+                                register
+                            </button>
+                            <button type="reset" class="btn btn-secondary">
+                                reset
+                            </button>
+                        </div>
+
+                        <div class="col-12">
+                            <div
+                                id="successMessage"
+                                class="alert alert-success d-none"
+                                role="status"
+                            >
+                                registration form completed successfully
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById("registrationForm");
+        const fields = form.querySelectorAll(".validate-field");
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirmPassword");
+        const genderInputs = form.querySelectorAll('input[name="gender"]');
+        const genderFeedback = document.getElementById("genderFeedback");
+        const successMessage = document.getElementById("successMessage");
+
+        let attemptedSubmit = false;
+
+        function updatePasswordValidity() {
+            if (
+                confirmPassword.value !== "" &&
+                confirmPassword.value !== password.value
+            ) {
+                confirmPassword.setCustomValidity("Passwords do not match.");
+            } else {
+                confirmPassword.setCustomValidity("");
+            }
+        }
+
+        function validateField(field) {
+            field.classList.remove("is-valid", "is-invalid");
+
+            if (field.checkValidity()) {
+                field.classList.add("is-valid");
+            } else {
+                field.classList.add("is-invalid");
+            }
+        }
+
+        function validateGender() {
+            const selected = [...genderInputs].some(input => input.checked);
+
+            genderInputs.forEach(input => {
+                input.classList.remove("is-valid", "is-invalid");
+                input.classList.add(selected ? "is-valid" : "is-invalid");
+            });
+
+            genderFeedback.classList.toggle("d-block", !selected);
+
+            return selected;
+        }
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            attemptedSubmit = true;
+
+            updatePasswordValidity();
+
+            fields.forEach(validateField);
+            validateGender();
+
+            if (form.checkValidity()) {
+                successMessage.classList.remove("d-none");
+            } else {
+                successMessage.classList.add("d-none");
+            }
+        });
+
+        fields.forEach(field => {
+            field.addEventListener("input", function () {
+                updatePasswordValidity();
+
+                if (attemptedSubmit) {
+                    fields.forEach(validateField);
+                    validateGender();
+
+                    if (form.checkValidity()) {
+                        successMessage.classList.remove("d-none");
+                    } else {
+                        successMessage.classList.add("d-none");
+                    }
+                }
+            });
+
+            field.addEventListener("change", function () {
+                if (attemptedSubmit) {
+                    validateField(field);
+                }
+            });
+        });
+
+        genderInputs.forEach(input => {
+            input.addEventListener("change", function () {
+                if (attemptedSubmit) {
+                    validateGender();
+                    successMessage.classList.toggle(
+                        "d-none",
+                        !form.checkValidity()
+                    );
+                }
+            });
+        });
+
+        form.addEventListener("reset", function () {
+            attemptedSubmit = false;
+            confirmPassword.setCustomValidity("");
+            successMessage.classList.add("d-none");
+            genderFeedback.classList.remove("d-block");
+
+            [...fields, ...genderInputs].forEach(field => {
+                field.classList.remove("is-valid", "is-invalid");
+            });
+        });
+    </script>
+
+</body>
+</html>
